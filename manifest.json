@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+	
+	"name": "chrome-paste",
+	"description": "A chrome extension to paste my username and password.",
+	"version": "0.0.1",
+	
+	"background": {
+		"scripts": ["index.js"]
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://*/*"],
+			"js": ["jquery.js", "content.js"]
+		}
+	],
+	"permissions": [
+		"contextMenus"
+	]
+}
